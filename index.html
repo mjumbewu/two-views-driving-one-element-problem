@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <script src="libs/jquery.js"></script>
+    <script src="libs/underscore-umd.js"></script>
+    <script src="libs/backbone.js"></script>
+
+    <script src="main.js" defer></script>
+  </head>
+
+  <body>
+    <h1>Welcome to the dual-view-element pitfalls demo!</h1>
+
+    <main id="app"></main>
+
+    <script id="home-tpl" type="text/html">
+      <h2>Home</h2>
+      <p>Click the button below to toggle between two views. The first view is a simple list of items, and the second view is a form to add new items to the list.</p>
+      <a href="/list" data-internal="true">Go to dynamic view</a>
+    </script>
+
+    <script id="list-tpl" type="text/html">
+      <h2>List of Items</h2>
+      <ul id="item-list"></ul>
+      <label for="new-item-input">Add a new item:</label>
+      <input type="text" id="new-item-input" placeholder="Enter item name">
+      <button id="add-item-btn">Add Item</button>
+      <a href="/" data-internal="true">Back to Home</a>
+    </script>
+  </body>
+</html>
